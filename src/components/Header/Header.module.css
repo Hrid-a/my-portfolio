@@ -1,0 +1,52 @@
+.wrapper {
+    width: 100%;
+    max-width: var(--header-content-width);
+    padding: 0 var(--viewport-padding);
+    height: var(--header-height);
+    margin-inline: auto;
+    display: flex;
+    align-items: baseline;
+    gap: 2.4rem;
+}
+
+
+.logo {
+    /* font-family: var(--ff-primary); */
+    color: var(--color-text);
+    padding-inline: 1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.logo a {
+    font-size: 3rem;
+}
+
+.logo span {
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.navigation {
+    margin-inline-start: auto;
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.actions button {
+    cursor: pointer;
+    display: block;
+
+}
+
+button.menu {
+    display: none;
+
+}

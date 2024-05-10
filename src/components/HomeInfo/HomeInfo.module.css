@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.heading span {
+    font-size: calc(20/ 16)rem;
+    font-weight: 500;
+}

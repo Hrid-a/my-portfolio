@@ -1,0 +1,41 @@
+.wrapper {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    font-family: var(--font-family-mono);
+    font-size: calc(20 / 16)rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* 
+        for decortion purposes
+    */
+    overflow: hidden;
+}
+
+.wrapper span {
+    display: block;
+    transform: translateY(var(--translate-from));
+    transition: transform 500ms;
+}
+
+.wrapper:hover span {
+    transform: translateY(var(--translate-to));
+    transition: transform 300ms;
+}
+
+.wrapper .mainText {
+    --translate-from: 0;
+    --translate-to: -100%;
+
+}
+
+.wrapper .hoverdText {
+    --translate-from: 100%;
+    --translate-to: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-weight: 900;
+    color: var(--color-primary);
+}
