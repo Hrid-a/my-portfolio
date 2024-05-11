@@ -18,6 +18,7 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--color-primary);
+    margin-inline-end: auto;
 }
 
 .logo a {
@@ -31,7 +32,12 @@
 }
 
 .navigation {
-    margin-inline-start: auto;
+    display: none;
+
+
+    @media screen and (min-width:40rem) {
+        display: revert;
+    }
 }
 
 .navigation ul {
@@ -40,13 +46,23 @@
     gap: 1.5rem;
 }
 
+
+
 .actions button {
     cursor: pointer;
     display: block;
-
 }
 
 button.menu {
+    @media screen and (min-width:40rem) {
+        display: none;
+    }
+}
+
+& button:first-of-type {
     display: none;
 
+    @media screen and (min-width:40rem) {
+        display: block;
+    }
 }

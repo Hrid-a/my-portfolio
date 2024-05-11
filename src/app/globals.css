@@ -63,7 +63,7 @@ h6 {
 /* GLOBAL STYLES */
 
 html {
-  font-family: var(--font-family), sans-serif;
+  font-family: var(--font-family-mono), sans-serif;
   letter-spacing: -0.03125em;
   background: var(--color-page-background);
 }
@@ -137,13 +137,19 @@ a:hover {
   text-underline-offset: 0.175em;
 }
 
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
 button {
   padding: 0;
   border: none;
   background-color: transparent;
 }
 
-ul {
+ul:not([class]) {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -151,7 +157,7 @@ ul {
 
 @media (min-width: 35rem) {
   h1 {
-    font-size: 2.25rem;
+    font-size: 2.50rem;
   }
 
   h2 {

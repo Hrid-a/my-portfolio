@@ -35,14 +35,14 @@ export const DARK_COLORS = {
 LIGHT_COLORS['--color-page-background'] = LIGHT_COLORS['--color-gray-300'];
 LIGHT_COLORS['--color-backdrop'] = LIGHT_COLORS['--color-decorative-500'];
 LIGHT_COLORS['--color-backdrop-highlight'] = LIGHT_COLORS['--color-decorative-300'];
-LIGHT_COLORS['--color-gradient-background'] = `linear-gradient(145deg), ${LIGHT_COLORS['--color-gray-200']}, ${LIGHT_COLORS['--color-gray-0']}`;
-LIGHT_COLORS['--hover-gradient-background'] = `linear-gradient(145deg), ${LIGHT_COLORS['--color-primary']}, ${LIGHT_COLORS['--color-primary-100']}`;
+LIGHT_COLORS['--color-gradient-background'] = `linear-gradient(145deg, ${LIGHT_COLORS['--color-gray-200']}, ${LIGHT_COLORS['--color-gray-0']})`;
+LIGHT_COLORS['--hover-gradient-background'] = `linear-gradient(145deg, ${LIGHT_COLORS['--color-primary']}, ${LIGHT_COLORS['--color-primary-100']})`;
 
 DARK_COLORS['--color-backdrop'] = DARK_COLORS['--color-decorative-100'];
 DARK_COLORS['--color-backdrop-highlight'] = DARK_COLORS['--color-decorative-500'];
 DARK_COLORS['--color-page-background'] = DARK_COLORS['--color-gray-300'];
-DARK_COLORS['--color-gradient-background'] = `linear-gradient(145deg), ${DARK_COLORS['--color-gray-200']}, ${DARK_COLORS['--color-gray-400']}`;
-DARK_COLORS['--hover-gradient-background'] = `linear-gradient(145deg), ${DARK_COLORS['--color-primary']}, ${DARK_COLORS['--color-primary-100']}`;
+DARK_COLORS['--color-gradient-background'] = `linear-gradient(145deg, ${DARK_COLORS['--color-gray-200']}, ${DARK_COLORS['--color-gray-400']})`;
+DARK_COLORS['--hover-gradient-background'] = `linear-gradient(145deg, ${DARK_COLORS['--color-primary']}, ${DARK_COLORS['--color-primary-100']})`;
 
 export const LIGHT_SHADOWS =
 {

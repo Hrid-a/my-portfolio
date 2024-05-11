@@ -18,10 +18,12 @@
     transition: transform 500ms;
 }
 
+.wrapper:focus-visible span,
 .wrapper:hover span {
     transform: translateY(var(--translate-to));
     transition: transform 300ms;
 }
+
 
 .wrapper .mainText {
     --translate-from: 0;
