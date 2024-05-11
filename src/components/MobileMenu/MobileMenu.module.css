@@ -1,0 +1,45 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100dvh;
+    min-height: 100dvh;
+    animation: fadeIn 600ms both;
+    animation-delay: 400ms;
+}
+
+.navigation {
+    flex: 1;
+}
+
+.navigation ul {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+
+}
+
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+
+    & p {
+        font-size: 14px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

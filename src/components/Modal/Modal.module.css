@@ -1,0 +1,63 @@
+.wrapper {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    padding: 16px;
+    animation: slideIn 500ms ease-out both;
+    animation-delay: 250ms;
+}
+
+.backdrop {
+    position: absolute;
+    inset: 0;
+    background: hsl(0deg 0% 0% / 0.75);
+    animation: fadeIn 500ms;
+}
+
+.content {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.dialog {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 0px;
+    right: 18px;
+    padding: 16px;
+    color: var(--color-primary);
+    cursor: pointer;
+    background: transparent;
+    border: none
+}
+
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

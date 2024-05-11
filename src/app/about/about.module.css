@@ -23,7 +23,7 @@
         --breathing-room: 16px;
         float: left;
         shape-outside:
-            url('https://courses.joshwcomeau.com/cfj-mats/me-light.png');
+            url('https://res.cloudinary.com/dmi9ztfss/image/upload/v1715460170/me-light_kowfpo.png');
         shape-margin: var(--breathing-room);
         margin-right: var(--breathing-room);
         min-width: 290px;
