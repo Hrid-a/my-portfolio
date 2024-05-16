@@ -3,25 +3,25 @@ import React from 'react';
 import { createPortal } from "react-dom";
 import {
   Menu,
-  Moon,
-  Sun
 } from 'react-feather';
 
 import VisuallyHidden from '../VisuallyHidden';
 import styles from './Header.module.css';
 import NavigationLink from '../NavigationLink';
 import MobileMenu from '../MobileMenu';
+import Link from 'next/link';
+import DarkModeBtn from '../DarkModeBtn';
 
-function Header({ theme }) {
+function Header({ initialTheme }) {
   const [isMobileMenuShown, setIsMobileMenuShown] = React.useState(false);
   return (
     <>
       <header className={styles.wrapper}>
         <div className={styles.logo}>
-          <a href="/">
+          <Link href="/">
             A
             <span>H</span>
-          </a>
+          </Link>
         </div>
         <nav className={styles.navigation}>
           <ul>
@@ -53,15 +53,7 @@ function Header({ theme }) {
           </ul>
         </nav>
         <div className={styles.actions}>
-          <button>
-            <VisuallyHidden>
-              {theme === 'light' ? 'switch to dark mode' : 'switch to light mode'}
-            </VisuallyHidden>
-            {
-              theme === 'light' ? <Sun size={24} /> :
-                <Moon size={24} />
-            }
-          </button>
+          <DarkModeBtn initialTheme={initialTheme} />
           <button
             onClick={() => setIsMobileMenuShown(true)}
             className={styles.menu}

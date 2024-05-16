@@ -50,5 +50,13 @@
     place-items: center;
     background: var(--color-gradient-background);
     box-shadow: var(--shadow-card);
+    transition: background 500ms ease-out;
+    will-change: transform;
+    border-radius: 8px;
+}
 
+.btn:hover,
+.btn:focus-visible {
+    background: var(--hover-gradient-background);
+    transition: background 250ms ease-in;
 }

@@ -1,3 +1,4 @@
+import { cookies } from "next/headers";
 import {
   Work_Sans,
   Spline_Sans_Mono
@@ -9,6 +10,7 @@ import { LIGHT_TOKENS, DARK_TOKENS } from "@/constant";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import MotionConfigWrapper from "@/components/MotionConfigWrapper";
 
 
 export const metadata = {
@@ -30,24 +32,28 @@ const monoFont = Spline_Sans_Mono({
 });
 
 export default function RootLayout({ children }) {
+  const savedTheme = cookies().get('theme-color')?.value;
 
-  const theme = 'light';
+  const theme = savedTheme || 'light';
 
   return (
-    <html
-      lang="en"
-      className={clsx(mainFont.variable, monoFont.variable)}
-      data-color-theme={theme}
-      style={theme === 'light' ? LIGHT_TOKENS : DARK_TOKENS}
-    >
-      <body
+    <MotionConfigWrapper>
+
+      <html
+        lang="en"
+        className={clsx(mainFont.variable, monoFont.variable)}
+        data-color-theme={theme}
+        style={theme === 'light' ? LIGHT_TOKENS : DARK_TOKENS}
       >
-        <Header theme={theme} />
-        <main>
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
+        <body
+        >
+          <Header initialTheme={theme} />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </body>
+      </html>
+    </MotionConfigWrapper>
   );
 }

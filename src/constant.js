@@ -73,6 +73,11 @@ export const DARK_TOKENS = {
     ...DARK_SHADOWS,
 };
 
+export const skills = [
+    'html', 'css', 'javaScript', 'express', 'react', 'tailwindcss', 'github', 'git',
+    'vscode', 'mongodb', 'sql', 'mongoose', 'css-in-js', 'next'
+]
+
 
 
 

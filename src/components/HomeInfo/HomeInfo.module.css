@@ -11,6 +11,10 @@
     font-size: 1rem;
 }
 
+.name {
+    color: var(--color-primary);
+}
+
 .btn {
     align-self: flex-start;
     display: flex;
@@ -23,6 +27,7 @@
     border-radius: 8px;
     font-size: 1.2rem;
     transition: background 500ms ease-out;
+    width: fit-content;
 }
 
 .btn:hover,

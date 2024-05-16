@@ -1,0 +1,21 @@
+.wrapper {
+    width: 100%;
+    max-width: var(--content-width);
+    margin-inline: auto;
+    padding: var(--viewport-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.heading {
+    text-align: center;
+    text-transform: uppercase;
+
+    &+p {
+        text-transform: capitalize;
+    }
+}

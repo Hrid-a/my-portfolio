@@ -1,0 +1,43 @@
+.wrapper {
+
+    width: 100%;
+}
+
+.wrapper ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1.4rem;
+    grid-auto-rows: 200px;
+    transition: opacity 250ms;
+
+    & li {
+        cursor: pointer;
+        font-size: 1rem;
+        border: none;
+        padding: 0.75rem 1rem;
+        background: var(--color-gradient-background);
+        border-radius: 8px;
+        color: var(--color-text);
+        box-shadow: var(--card-shadow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+            display: block;
+            padding: 0.5rem;
+            width: fit-content;
+            object-fit: contain;
+            height: 180px;
+        }
+
+    }
+
+    &:hover li img {
+        opacity: 0.5;
+    }
+
+    &:hover li:hover img {
+        opacity: 1;
+    }
+}

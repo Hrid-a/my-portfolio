@@ -19,7 +19,8 @@
 }
 
 .wrapper:focus-visible span,
-.wrapper:hover span {
+.wrapper:hover span,
+.active span {
     transform: translateY(var(--translate-to));
     transition: transform 300ms;
 }
