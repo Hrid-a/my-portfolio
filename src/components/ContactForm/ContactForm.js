@@ -3,12 +3,14 @@ import React from 'react';
 import { useForm } from "react-hook-form"
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Toaster, toast } from 'sonner';
+
 
 import { schema } from '@/helpers/schema'
 import styles from './ContactForm.module.css';
 
 function ContactForm() {
-  const { register, handleSubmit, formState: { errors, isSubmitted, isSubmitSuccessful, isSubmitting }, reset } = useForm(
+  const { register, handleSubmit, formState: { errors }, reset } = useForm(
     {
       defaultValues: {
         name: "",
@@ -18,37 +20,37 @@ function ContactForm() {
       resolver: zodResolver(schema)
     }
   );
+  const [loading, setLoading] = React.useState(false);
   const formRef = React.useRef();
 
   const sendEmail = (data) => {
-    console.log({ data });
-    console.log({ isSubmitted, isSubmitSuccessful, isSubmitting })
-    // emailjs.sendForm(
-    //   process.env.SERVICE_KEY,
-    //   process.env.SERVICE_TEMPLATE,
-    //   formRef.current,
-    //   process.env.SERVICE_PASS
-    // )
-    //   .then((result) => {
-    //     console.log({ result });
-    //     // toast.success("message recieved.Thank you! I'll be in touch with you shortly.");
-    //     reset();
-    //   }, () => {
-    //     // toast.error("Sorry an error occured.Please try again.");
-    //   });
+    setLoading(true);
+    emailjs.init({
+      publicKey: process.env.NEXT_PUBLIC_KEY,
+      blockHeadless: true,
+      blockList: {
+        list: ['foo@emailjs.com', 'bar@emailjs.com'],
+        watchVariable: 'userEmail',
+      },
+    });
 
-    emailjs.send(process.env.SERVICE_KEY, process.env.SERVICE_TEMPLATE, data).then(
-      (response) => {
-        console.log('SUCCESS!', response.status, response.text);
+    emailjs.send(process.env.NEXT_PUBLIC_SERVICE_KEY, process.env.NEXT_PUBLIC_SERVICE_TEMPLATE, data).then(
+      () => {
+        setLoading(false);
+        toast.success("Email sent successfully.Thank you! I'll be in touch with you shortly.");
         reset();
       },
-      (error) => {
-        console.log('FAILED...', error);
+      () => {
+        setLoading(false);
+        toast.error('Failed to send email. Please try again later.');
       },
     );
   };
 
   return <form className={styles.form} ref={formRef} onSubmit={handleSubmit(sendEmail)}>
+    <Toaster richColors position="top-center" toastOptions={{
+      className: `${styles.toast}`,
+    }} />
     <input
       type="text" {...register("name")}
       placeholder="Ahmed Hrid"
@@ -72,7 +74,8 @@ function ContactForm() {
     <button
       type="submit"
       className={styles.btn}
-      disabled={isSubmitted}
+      disabled={loading}
+      style={{ pointerEvents: loading ? 'none' : 'auto', cursor: loading ? 'not-allowed' : 'pointer' }}
     >
       Send Message
     </button>

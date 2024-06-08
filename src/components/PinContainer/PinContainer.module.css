@@ -1,0 +1,42 @@
+.wrapper {
+    position: relative;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.wrapper:hover .decoration {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.container {
+    display: block;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 100%;
+    max-width: 400px;
+    margin: 16px 00 0.09375rem;
+}
+
+.decoration {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 0.4);
+    background: var(--color-gradient-background);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 700ms;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    z-index: 50;
+}

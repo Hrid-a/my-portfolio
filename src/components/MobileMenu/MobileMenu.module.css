@@ -1,11 +1,11 @@
 .content {
+    margin-block: 50px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100dvh;
-    min-height: 100dvh;
     animation: fadeIn 600ms both;
-    animation-delay: 400ms;
+    animation-delay: 700ms;
 }
 
 .navigation {
@@ -13,11 +13,13 @@
 }
 
 .navigation ul {
-
+    padding-block: 1.6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 22px;
+    perspective: 120px;
+    perspective-origin: bottom;
 
 }
 
@@ -31,6 +33,17 @@
 
     & p {
         font-size: 14px;
+    }
+}
+
+.actions {
+    padding-block: 20px;
+    display: flex;
+    gap: 24px;
+    justify-content: baseline;
+
+    &>button {
+        cursor: pointer;
     }
 }
 

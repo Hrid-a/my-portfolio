@@ -1,0 +1,121 @@
+.wrapper {
+    position: relative;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    max-width: 24rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 500ms;
+    z-index: 60;
+
+    &>div {
+        width: 100%;
+        height: 100%;
+        margin-top: -1.75rem;
+    }
+
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    z-index: 10;
+    border-radius: 20px;
+    background-color: rgb(9 9 11);
+    color: currentColor;
+    padding-block: 0.125rem;
+    padding-inline: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    & span:first-of-type {
+        position: relative;
+        color: whitesmoke;
+        font-weight: 700;
+        display: inline-block;
+        padding-block: 0.125rem;
+        z-index: 20;
+    }
+
+    & span:last-of-type {
+        position: absolute;
+        bottom: 0;
+        left: 1.125rem;
+        height: 1px;
+        width: calc(100% - 2.25rem);
+        background: linear-gradient(to right, rgba(46, 204, 113, 0), rgba(46, 204, 113, 0.9), rgba(46, 204, 113, 0));
+        transition: opacity 500ms;
+
+        /* &:hover {
+            opacity: 0.4;
+        } */
+    }
+}
+
+.pinWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: 0.09375rem;
+    margin-top: 1rem;
+    transform: translate(-50%, -50%);
+}
+
+
+.pinItem {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 11.25rem;
+    width: 11.25rem;
+    border-radius: 50%;
+    background: #0ea5e9;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 0.4);
+}
+
+.pin {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    background: linear-gradient(to bottom, transparent, #06b6d4);
+    transform: translateY(14px);
+    width: 1px;
+    height: 20px;
+    filter: blur(2px);
+
+}
+
+.line {
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translateX(1.5px);
+    background-color: #0891b2;
+    transform: translateY(14px);
+    width: 4px;
+    height: 4px;
+    border-radius: 16px;
+    filter: blur(3px);
+    z-index: 50;
+}
+
+.line:last-of-type {
+    background-color: #67e8f9;
+}
+
+/* absolute right-1/2 translate-x-[0.5px] bottom-1/2 bg-cyan-300 translate-y-[14px] w-[2px] h-[2px] rounded-full z-40  */

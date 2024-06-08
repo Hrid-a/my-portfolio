@@ -26,7 +26,7 @@ function Modal({ isOpen, handleDismiss, description, children }) {
             className={styles.closeBtn}
             onClick={handleDismiss}
           >
-            <Close />
+            <Close size={24} strokeWidth={3} />
             <VisuallyHidden>Dismiss modal</VisuallyHidden>
           </button>
 

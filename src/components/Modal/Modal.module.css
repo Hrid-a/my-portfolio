@@ -10,7 +10,7 @@
 .backdrop {
     position: absolute;
     inset: 0;
-    background: hsl(0deg 0% 0% / 0.75);
+    background: hsl(0deg 0% 0% / 0.55);
     animation: fadeIn 500ms;
 }
 
@@ -23,8 +23,10 @@
 }
 
 .dialog {
+    height: 100%;
     position: relative;
     background: white;
+    color: hsl(216, 4%, 25%);
     border-radius: 8px;
     padding: 32px;
 }
@@ -34,10 +36,17 @@
     top: 0px;
     right: 18px;
     padding: 16px;
-    color: var(--color-primary);
     cursor: pointer;
-    background: transparent;
-    border: none
+    border: none;
+    color: var(--color-primary);
+    background: var(--color-gradient-background);
+    width: 50px;
+    aspect-ratio: 1;
+    box-shadow: var(--shadow-card);
+    display: grid;
+    place-content: center;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transform: translate(-24px, 10px);
 }
 
 

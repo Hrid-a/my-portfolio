@@ -74,8 +74,8 @@ export const DARK_TOKENS = {
 };
 
 export const skills = [
-    'html', 'css', 'javaScript', 'express', 'react', 'tailwindcss', 'github', 'git',
-    'vscode', 'mongodb', 'sql', 'mongoose', 'css-in-js', 'next'
+    'html', 'css', 'javaScript', 'express', 'react', 'next', 'tailwindcss', 'github', 'git',
+    'vscode', 'mongodb', 'sql', 'mongoose', 'css-in-js',
 ]
 
 

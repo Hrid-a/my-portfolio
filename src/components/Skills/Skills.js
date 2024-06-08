@@ -29,7 +29,7 @@ function Skills() {
           </motion.li>
         })}
       </ul>
-    </div>;
+    </div>
   </LayoutGroup>
 }
 

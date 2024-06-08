@@ -21,7 +21,7 @@ function Animate({ direction, type, children }) {
     transition={{
       type: 'spring',
       stiffness: 400,
-      damping: 40,
+      damping: 70,
     }}
   >
     {children}

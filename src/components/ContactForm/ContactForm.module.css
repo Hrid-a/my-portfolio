@@ -78,3 +78,11 @@
     height: 80px;
     background-color: var(--color-decorative-500);
 }
+
+.toast {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: var(--font-family-mono);
+    min-width: 300px;
+    color: var(--color-text);
+}

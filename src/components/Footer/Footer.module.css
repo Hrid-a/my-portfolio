@@ -1,7 +1,7 @@
 .wrapper {
-    background-color: var(--color-decorative-500);
+    margin-top: 40px;
     width: 100%;
-    max-width: var(--header-content-width);
     padding: var(--viewport-padding);
-    margin-inline: auto;
+    display: grid;
+    place-items: center;
 }

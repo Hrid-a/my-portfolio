@@ -58,7 +58,7 @@ function Header({ initialTheme }) {
             onClick={() => setIsMobileMenuShown(true)}
             className={styles.menu}
           >
-            <Menu />
+            <Menu className='menu' size={24} />
           </button>
         </div>
       </header>

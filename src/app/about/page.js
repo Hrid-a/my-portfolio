@@ -5,6 +5,7 @@ import profile from '../../../public/about.png';
 import styles from './about.module.css';
 import { GitHub, Linkedin } from 'react-feather';
 import Animate from '@/components/Animate';
+import VisuallyHidden from '@/components/VisuallyHidden';
 const AboutMe = () => {
     return (
         <>
@@ -38,10 +39,12 @@ const AboutMe = () => {
                                     className={styles.btn}
                                     href='https://github.com/Hrid-a' target='_blank'>
                                     <GitHub size={24} />
+                                    <VisuallyHidden>a git hub link to my github portfolio</VisuallyHidden>
                                 </a>
                                 <a
                                     className={styles.btn}
                                     href='https://www.linkedin.com/in/hrid-044895258' target='_blank'>
+                                    <VisuallyHidden>a  linkdin lin to my Linkd in portfolio</VisuallyHidden>
                                     <Linkedin size={24} />
                                 </a>
                             </div>

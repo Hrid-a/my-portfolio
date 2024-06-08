@@ -11,7 +11,6 @@ function NavigationLink({ children, href }) {
   return <Link href={href} className={clsx(styles.wrapper, pathname === `/${href}` ? styles.active : '')}>
     <span className={styles.mainText}>{children}</span>
     <span className={styles.hoverdText}>{children}</span>
-
   </Link>;
 }
 
