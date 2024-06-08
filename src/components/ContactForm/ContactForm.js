@@ -23,19 +23,29 @@ function ContactForm() {
   const sendEmail = (data) => {
     console.log({ data });
     console.log({ isSubmitted, isSubmitSuccessful, isSubmitting })
-    emailjs.sendForm(
-      process.env.VITE_SERVICE_KEY,
-      process.env.VITE_SERVICE_TEMPLATE,
-      formRef.current,
-      process.env.VITE_SERVICE_PASS
-    )
-      .then((result) => {
-        console.log({ result });
-        // toast.success("message recieved.Thank you! I'll be in touch with you shortly.");
+    // emailjs.sendForm(
+    //   process.env.SERVICE_KEY,
+    //   process.env.SERVICE_TEMPLATE,
+    //   formRef.current,
+    //   process.env.SERVICE_PASS
+    // )
+    //   .then((result) => {
+    //     console.log({ result });
+    //     // toast.success("message recieved.Thank you! I'll be in touch with you shortly.");
+    //     reset();
+    //   }, () => {
+    //     // toast.error("Sorry an error occured.Please try again.");
+    //   });
+
+    emailjs.send(process.env.SERVICE_KEY, process.env.SERVICE_TEMPLATE, data).then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text);
         reset();
-      }, () => {
-        // toast.error("Sorry an error occured.Please try again.");
-      });
+      },
+      (error) => {
+        console.log('FAILED...', error);
+      },
+    );
   };
 
   return <form className={styles.form} ref={formRef} onSubmit={handleSubmit(sendEmail)}>

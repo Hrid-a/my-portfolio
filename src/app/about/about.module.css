@@ -1,5 +1,6 @@
 .wrapper {
     width: 100%;
+    max-width: 850px;
     margin-inline: auto;
     padding: var(--viewport-padding);
 
@@ -8,12 +9,6 @@
     gap: 2rem;
     justify-content: center;
     align-items: center;
-
-    @media screen and (min-width:60rem) {
-        width: 60%;
-    }
-
-    max-width: var(--content-width);
 }
 
 .floated {
